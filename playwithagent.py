@@ -1,4 +1,5 @@
 import pickle
+import os
 from tictactoe import TicTacToe, QLearningAgent, MinimaxOpponent, play_against_agent
 
 def main():

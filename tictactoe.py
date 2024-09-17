@@ -81,6 +81,12 @@ class QLearningAgent:
             target = reward + self.gamma * max(future_qs, default=0)
         new_q = old_q + self.alpha * (target - old_q)
         self.q_table[(state, action)] = new_q
+class RandomOpponent:
+    def __init__(self, player):
+        self.player = player
+
+    def choose_action(self, state, available_actions):
+        return random.choice(available_actions)
 
 class MinimaxOpponent:
     def __init__(self, player):
